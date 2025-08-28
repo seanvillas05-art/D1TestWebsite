@@ -1,5 +1,6 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import Reveal from "../components/Reveal";
+
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
