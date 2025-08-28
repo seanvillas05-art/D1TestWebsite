@@ -1,23 +1,14 @@
 "use client";
-import Reveal from "../components/Reveal";
 
+import { motion } from "framer-motion";
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-};
-
-export default function Reveal({
-  children,
-  delay = 0,
-}: { children: React.ReactNode; delay?: number }) {
+export default function Reveal({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-      transition={{ delay }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>
