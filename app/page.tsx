@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Reveal from "../components/Reveal";   // ✅ use relative path
+import Reveal from "../Components/Reveal";   // ✅ use relative path
 import { motion } from "framer-motion";
 
 export default function Home() {
